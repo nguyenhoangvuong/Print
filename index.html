@@ -3,16 +3,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1258" />
     <meta name="Generator" content="Microsoft Word 15 (filtered)" />
     <style>
-      .MsoPapDefault {
+      /* .MsoPapDefault {
         margin-bottom: 8pt;
         line-height: 107%;
-      }
-      @page WordSection1 {
+      } */
+      /* @page WordSection1 {
         size: 595.3pt 841.9pt;
         margin: 30.25pt 30.25pt 14.15pt 0;
-      }
+      } */
       div.WordSection1 {
-        page: WordSection1;
+        /* page: WordSection1; */
         position: relative;
         width: 21cm;
         margin: auto;
@@ -24,11 +24,12 @@
           height: 25.7cm !important;
           overflow: hidden !important;
         }
-        .img-background{
+        .printBtn,
+        .img-background {
           display: none !important;
         }
       }
-      .container{
+      .container {
         width: 100vw;
         height: auto;
       }
@@ -97,65 +98,65 @@
         left: 6.5cm;
       }
 
-      .place-of-receive-info{
+      .place-of-receive-info {
         top: 8.8cm;
       }
 
-      
+      .printBtn {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        padding: 5px 20px;
+        font-size: 20px;
+        background: #018792;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #fff;
+        z-index: 999;
+        transition: all 0.2s linear;
+      }
+
+      .printBtn:hover{
+        opacity: 0.5;
+      }
     </style>
   </head>
 
   <body lang="EN-US">
     <div class="container">
       <div class="WordSection1">
-      <img src="./down.png" class="img-background" />
+        <img src="./down.png" class="img-background" />
 
-      <!-- shipper -->
-      <div class="col-left-1 shipper-info">
-        BINH DINH MINERALS JOINT STOCK COMPANY
+        <!-- shipper -->
+        <div class="col-left-1 shipper-info">
+          BINH DINH MINERALS JOINT STOCK COMPANY
+        </div>
+
+        <!-- B/L No -->
+        <div class="col-left-2 bl-no-info">00128986</div>
+
+        <!-- consignee -->
+        <div class="col-left-1 consignee-info">
+          NIPPON STEEL TRADING CORPORATION<br />
+          TOKYO NIHONBASHI TOWER 23-26F, 2-7-1 NIHONBASHI, CHUO-KU, TOKYO
+          103-6025
+        </div>
+
+        <!-- Notify Party -->
+        <div class="col-left-2 notify-party-info">SAME AS CONSIGNEE</div>
+
+        <!-- Vessel -->
+        <div class="col-left-1 vessel-info">SINAR SOLO</div>
+
+        <!-- Voyage -->
+        <div class="voyage-info">958S</div>
+
+        <!-- Place of receive -->
+        <div class="col-left-2 place-of-receive-info">QUY NHON, VIETNAM</div>
       </div>
-
-      <!-- B/L No -->
-      <div class="col-left-2 bl-no-info">00128986</div>
-
-      <!-- consignee -->
-      <div class="col-left-1 consignee-info">
-        NIPPON STEEL TRADING CORPORATION<br />
-        TOKYO NIHONBASHI TOWER 23-26F, 2-7-1 NIHONBASHI, CHUO-KU, TOKYO 103-6025
-      </div>
-
-      <!-- Notify Party -->
-      <div class="col-left-2 notify-party-info">SAME AS CONSIGNEE</div>
-
-      <!-- Vessel -->
-      <div class="col-left-1 vessel-info">SINAR SOLO</div>
-
-      <!-- Voyage -->
-      <div class="voyage-info">958S</div>
-
-      <!-- Place of receive -->
-      <div class="col-left-2 place-of-receive-info">QUY NHON, VIETNAM</div>
     </div>
-    </div>
-    <button
-      class="printBtn"
-      style="
-        position: fixed;
-        right: 10px;
-        top: 10px;
-        padding: 5px 20px;
-        font-size: 20px;
-        background: lightgreen;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        color: #333;
-        z-index: 999;
-      "
-      onclick="handlePrint()"
-    >
-      Print
-    </button>
+    <button class="printBtn" onclick="handlePrint()">Print</button>
   </body>
   <script>
     let $ = document.querySelector.bind(document);
