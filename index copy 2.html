@@ -3,9 +3,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1258" />
     <meta name="Generator" content="Microsoft Word 15 (filtered)" />
     <style>
-      div.WordSection1 {
-        /* page: WordSection1; */
-        position: relative;
+      page {
+        background: white;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5cm;
+        box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+      }
+
+      page[size="A4"] {
+        width: 21cm;
+        height: 29.7cm;
+      }
+
+      page[size="A4"][layout="portrait"] {
+        width: 29.7cm;
+        height: 21cm;
+      }
+
+      @page{
+        display: none;
+      }
+
+      @media print {
+        body,
+        page {
+          margin: 0;
+          box-shadow: 0;
+        }
       }
 
       @page {
@@ -126,6 +151,51 @@
   </head>
 
   <body lang="EN-US">
+
+    <page size="A4">
+
+  <div class="header">
+    [nomeEmpresa]
+    <br> [endereco] - [cidade] - [cep]
+    <br> [cnpj] - [telefone]
+    <br>
+    <h3>[nomeRelatorio] -  [tipoRelatorio]</h3>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>[coluna0]</th>
+        <th>[coluna1]</th>
+        <th>[coluna2]</th>
+        <th>[coluna3]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</page>
+
+<page size="A4"></page>
+
     <div class="container">
       <div class="WordSection1">
         <img src="./down.png" class="img-background" />
