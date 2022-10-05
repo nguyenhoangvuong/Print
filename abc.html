@@ -14,9 +14,10 @@
       }
 
       page {
+        position: relative;
         background: white;
         display: block;
-        /* margin: 0 auto; */
+        margin: 0 auto;
         margin-bottom: 0.5cm;
         box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
       }
@@ -31,6 +32,25 @@
         height: 21cm;
       }
 
+      .printBtn {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        padding: 5px 20px;
+        font-size: 20px;
+        background: #018792;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #fff;
+        z-index: 999;
+        transition: all 0.2s linear;
+      }
+
+      .printBtn:hover {
+        opacity: 0.5;
+      }
+
       @media print {
         body,
         page {
@@ -38,91 +58,290 @@
           box-shadow: 0;
           position: relative;
         }
+
+        .printBtn,
+        .img-background {
+          display: none !important;
+        }
       }
 
-      .header {
-        padding-top: 10px;
-        text-align: center;
-        border: 2px solid #ddd;
+      page > *:not(img) {
+        position: absolute;
       }
 
-      table {
-        border-collapse: collapse;
+      .img-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        object-fit: contain;
+        display: block;
         width: 21cm;
-        font-size: 80%;
+        user-select: none;
       }
-
-      table th {
-        background-color: #4caf50;
-        color: white;
-        text-align: center;
-      }
-
-      th,
-      td {
-        border: 1px solid #ddd;
-        text-align: left;
-      }
-
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-
 
       .shipper-info {
         line-height: 115%;
-        top: calc(3.2cm + 8px);
+        top: 3.1cm;
         max-width: 9cm;
+      }
+
+      .bl-no-info {
+        top: 3.1cm;
+      }
+
+      .WordSection1 > *:not(img) {
+        position: absolute;
       }
 
       .col-left-1 {
         left: 1.07cm;
       }
 
-      page > *:not(img) {
-        position: absolute;
+      .col-left-2 {
+        left: 6.5cm;
+      }
+
+      .col-left-3 {
+        left: 10.85cm;
+      }
+
+      .consignee-info {
+        top: 5.9cm;
+        max-width: 9cm;
+      }
+
+      .notify-party-info {
+        top: 5.5cm;
+        max-width: 9cm;
+      }
+
+      .vessel-info {
+        top: 8.8cm;
+      }
+
+      .voyage-info {
+        top: 8.8cm;
+      }
+
+      .place-of-receive-info {
+        top: 8.8cm;
+      }
+
+      .port-of-loading {
+        top: 9.75cm;
+      }
+
+      .port-of-discharge {
+        top: 9.75cm;
+        left: 6.5cm;
+      }
+
+      .place-of-delivery {
+        top: 9.75cm;
+      }
+
+      /*  */
+      .kind-of-packages {
+        top: 11.55cm;
+        max-width: 12cm;
+      }
+
+      .gross-weight {
+        top: 11.55cm;
+        left: 14cm;
+      }
+
+      .measurement {
+        top: 11.55cm;
+        left: 17.37cm;
+      }
+
+      /*  */
+      .collect,
+      .prepaid,
+      .currency,
+      .unit,
+      .rate,
+      .freight-and-charges {
+        top: 22cm;
+      }
+
+      .rate {
+        left: 6.53cm;
+      }
+
+      .unit {
+        left: 9.52cm;
+      }
+
+      .currency {
+        left: 12.1cm;
+      }
+
+      .prepaid {
+        left: 14.3cm;
+      }
+
+      .collect {
+        left: 17.25cm;
+      }
+
+      /*  */
+      .place-of-issue-of-bl,
+      .freight-payable-at {
+        top: 23.1cm;
+      }
+
+      .date-of-issue-bl,
+      .number-and-original-bsl {
+        top: 24.05cm;
+      }
+
+      .shipped-on-board-date,
+      .declared-values {
+        top: 24.95cm;
+      }
+
+      .for-delivery {
+        top: 25.8cm;
+        max-width: 9cm;
       }
     </style>
   </head>
   <body>
     <page size="A4">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Test</th>
-            <th>Test</th>
-            <th>Test</th>
-            <th>Test</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+      <img src="./down.png" class="img-background" />
 
+      <!-- shipper -->
       <div class="col-left-1 shipper-info">
-          BINH DINH MINERALS JOINT STOCK COMPANY
-        </div>
+        BINH DINH MINERALS JOINT STOCK COMPANY
+      </div>
 
+      <!-- B/L No -->
+      <div class="col-left-3 bl-no-info">00128986</div>
+
+      <!-- consignee -->
+      <div class="col-left-1 consignee-info">
+        NIPPON STEEL TRADING CORPORATION<br />
+        TOKYO NIHONBASHI TOWER 23-26F, 2-7-1 NIHONBASHI, CHUO-KU, TOKYO 103-6025
+      </div>
+
+      <!-- Notify Party -->
+      <div class="col-left-3 notify-party-info">SAME AS CONSIGNEE</div>
+
+      <!-- Vessel -->
+      <div class="col-left-1 vessel-info">SINAR SOLO</div>
+
+      <!-- Voyage -->
+      <div class="col-left-2 voyage-info">958S</div>
+
+      <!-- Place of receive -->
+      <div class="col-left-3 place-of-receive-info">QUY NHON, VIETNAM</div>
+
+      <!-- port of loading -->
+      <div class="col-left-1 port-of-loading">QUY NHON, VIETNAM</div>
+
+      <!-- port of discharge -->
+      <div class="port-of-discharge">TOKYO, JAPAN</div>
+
+      <!-- place of delivery -->
+      <div class="col-left-3 place-of-delivery">TOKYO, JAPAN</div>
+
+      <!-- kind of packages -->
+      <div class="col-left-1 kind-of-packages">
+        SHIPPER ' S LOAD, STOW, WEIGHT, COUNT SEAL FCL/FCL - CY/CY
+        <br />
+        <br />
+        TRHU3200104 / VN1540831A / 20'DC / 20 BAGS / NYKU3427206 / VN1540834A /
+        20'DC / 20 BAGS / MOAU0642945 / VN1540835A / 20'DC / 20 BAGS /
+        TRLU9728519 / VN1540846A / 20'DC / 20 BAGS / 4 X 20'DC (CONTAINERS) SAID
+        TO CONTAIN: TITANIUM SLAG
+        <br />
+        <br />
+        GW: 80080 KGS NW: 80000 KGS
+        <br />
+        <br />
+        20,020.0000 KGS / 11.0000 CBM 20,020.0000 KGS / 11.0000 CBM 20,020.0000
+        KGS / 11.0000 CBM
+        <br />
+        <br />
+        20,020.0000 KGS / 11.0000 CBM
+      </div>
+
+      <!-- gross weight -->
+      <div class="gross-weight">80,080.0000 KGS</div>
+
+      <!-- measurement -->
+      <div class="measurement">44.0000 CBM</div>
+
+      <!-- freight & charges -->
+      <div class="col-left-1 freight-and-charges">FREIGHT PREPAID</div>
+
+      <!-- rate -->
+      <div class="rate">FREIGHT PREPAID</div>
+
+      <!-- unit -->
+      <div class="unit">UNIT</div>
+
+      <!-- currency -->
+      <div class="currency">CURRENCY</div>
+
+      <!-- prepaid -->
+      <div class="prepaid">PREPAID</div>
+
+      <!-- collect -->
+      <div class="collect">COLLECT</div>
+
+      <!-- freight payable at -->
+      <div class="col-left-1 freight-payable-at">DA NANG, VIET NAM</div>
+
+      <!-- place of issue of B/L -->
+      <div class="col-left-2 place-of-issue-of-bl">DA NANG, VIET NAM</div>
+
+      <!-- number & original  Bs/L -->
+      <div class="col-left-1 number-and-original-bsl">THREE (3)</div>
+
+      <!-- date of issue of  B/L -->
+      <div class="col-left-2 date-of-issue-bl">Apr-17-2022</div>
+
+      <!-- declared values -->
+      <div class="col-left-1 declared-values">Apr-17-2022</div>
+
+      <!-- shipped on board date -->
+      <div class="col-left-2 shipped-on-board-date">Apr-17-2022</div>
+
+      <!-- for delivery -->
+      <div class="col-left-1 for-delivery">
+        SHINKO EXPRESS CO.,LTD.
+        <br />
+        4TH FLOOR,ZENNIKKEN BLDG. 3-4 HATOBACHO,CHUO-KU, KOBE CITY,HYOGO-KEN
+        650-0042, JAPAN. TEL:+81-78-335-1366 FAX:+81-78-335-1368 E-MAIL:
+        MIYAGI@SHINKOEXP.CO.JP
+      </div>
     </page>
 
     <page size="A4"></page>
+    <button class="printBtn" onclick="handlePrint()">Print</button>
   </body>
+  <script>
+    let $ = document.querySelector.bind(document);
+    function handlePrint() {
+      window.print();
+      if (window.print) {
+        var mediaQueryList = window.matchMedia("print");
+        mediaQueryList.addListener(function (mql) {
+          if (mql.matches) {
+            beforePrint();
+          } else {
+            afterPrint();
+          }
+        });
+      }
+
+      window.onbeforeprint = beforePrint;
+      window.onafterprint = afterPrint;
+    }
+  </script>
 </html>
