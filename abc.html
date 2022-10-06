@@ -51,20 +51,6 @@
         opacity: 0.5;
       }
 
-      @media print {
-        body,
-        page {
-          margin: 0;
-          box-shadow: 0;
-          position: relative;
-        }
-
-        .printBtn,
-        .img-background {
-          display: none !important;
-        }
-      }
-
       page > *:not(img) {
         position: absolute;
       }
@@ -165,7 +151,7 @@
       .unit,
       .rate,
       .freight-and-charges {
-        top: 22cm;
+        top: 21.2cm;
       }
 
       .rate {
@@ -191,22 +177,73 @@
       /*  */
       .place-of-issue-of-bl,
       .freight-payable-at {
-        top: 23.1cm;
+        top: 23.03cm;
       }
 
       .date-of-issue-bl,
       .number-and-original-bsl {
-        top: 24.05cm;
+        top: 23.97cm;
       }
 
       .shipped-on-board-date,
       .declared-values {
-        top: 24.95cm;
+        top: 24.88cm;
       }
 
       .for-delivery {
         top: 25.8cm;
         max-width: 9cm;
+      }
+
+      /* custom when print */
+      @media print {
+        body,
+        page {
+          margin: 0;
+          box-shadow: 0;
+          position: relative;
+        }
+
+        .printBtn,
+        .img-background {
+          display: none !important;
+        }
+
+        .col-left-1 {
+          left: calc(1.07cm + 0.18cm);
+        }
+
+        .col-left-2 {
+          left: calc(6.5cm + 0.18cm);
+        }
+
+        .col-left-3 {
+          left: calc(10.85cm + 0.18cm);
+        }
+
+        .gross-weight {
+          left: calc(14cm + 0.18cm);
+        }
+
+        .measurement {
+          left: calc(17.37cm + 0.18cm);
+        }
+
+        .unit {
+          left: calc(9.52cm + 0.18cm);
+        }
+
+        .currency {
+          left: calc(12.1cm + 0.18cm);
+        }
+
+        .prepaid {
+          left: calc(14.3cm + 0.18cm);
+        }
+
+        .collect {
+          left: calc(17.25cm + 0.18cm);
+        }
       }
     </style>
   </head>
