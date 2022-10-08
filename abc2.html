@@ -185,59 +185,62 @@
       @media print {
         body,
         page {
+          width: 21cm;
           margin: 0;
           box-shadow: 0;
           position: relative;
-          margin-left: calc(0.11cm - 0.2cm);
+          
         }
+
+        page{
+          transform: translateY(-0.1cm);
+        }
+
 
         .printBtn,
         .img-background {
           display: none !important;
         }
-
-
-        /* .col-left-1 {
-          left: calc(1.07cm - 0.18cm);
+        col-left-3 {
+          transform: translateX(-0.05cm);
         }
 
-        .col-left-2 {
-          left: calc(6.5cm - 0.18cm);
+        .for-delivery,
+        .declared-values,
+        .number-and-original-bsl,
+        .freight-payable-at,
+        .freight-and-charges{
+          transform: translateX(0.029cm);
+        }
+        .col-left-3{
+          transform: translateX(-0.038cm);
+        }
+ 
+        .rate,
+        .place-of-issue-of-bl,
+        .date-of-issue-bl,
+        .shipped-on-board-date{
+          transform: translateX(0.053cm);
         }
 
-        .col-left-3 {
-          left: calc(10.85cm - 0.18cm);
+        .currency,
+        .prepaid,
+        .collect{
+          transform: translateX(0.0165cm);
+        }
+        .unit{
+          transform: translateX(0.0173cm);
         }
 
-        .gross-weight {
-          left: calc(14cm - 0.18cm);
+        .shipper-info{
+          transform: translateX(-0.05cm);
         }
-
-        .measurement {
-          left: calc(17.37cm - 0.18cm);
-        }
-
-        .unit {
-          left: calc(9.52cm - 0.18cm);
-        }
-
-        .currency {
-          left: calc(12.11cm - 0.18cm);
-        }
-
-        .prepaid {
-          left: calc(14.3cm - 0.18cm);
-        }
-
-        .collect {
-          left: calc(17.25cm - 0.18cm);
-        } */
       }
     </style>
   </head>
   <body>
     <page size="A4">
-      <img src="./down.png" class="img-background" />
+      <img src="./z3783242943605_8f885269981c9ede3dbd1eedc768cbd3.jpg" class="img-background" />
 
       <!-- shipper -->
       <div class="col-left-1 shipper-info">
